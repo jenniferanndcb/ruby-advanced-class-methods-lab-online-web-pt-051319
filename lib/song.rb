@@ -29,5 +29,10 @@ class Song
     song.save
     song
   end
+  
+  def find_by_name(name)
+    @@all.each do |s| s.all.find (name)
+    end
+end
 
 end
