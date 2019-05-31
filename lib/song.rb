@@ -55,8 +55,14 @@ class Song
     
     
   def self.create_from_filename(file_name)
-    self.new_from_filename(file_name)
+    song_file = file_name.split(/[-.]/).map(&:strip)
+    name = song_file[1]
+    artist_name = song_file[0]
+    
     song = self.new 
+    song.name = name
+    song.artist_name = artist_name
+    
     song.save 
   end
 end
