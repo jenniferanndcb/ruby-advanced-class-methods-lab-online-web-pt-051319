@@ -45,6 +45,10 @@ class Song
     song_attr = file_name.split(/-.\s/)
     name = song_attr[1]
     artist_name = song_attr[0]
+    
+    song = self.new 
+    song.name = name
+    song.artist_name = artist_name
   end
     
 end
