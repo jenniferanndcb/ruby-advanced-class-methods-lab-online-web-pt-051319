@@ -3,10 +3,10 @@ class Song
   @@all = []
 
   def self.create(name)
-    song = self.new
-    song.name = name
-    @@all << song
-    song.name
+    song = self.new   #instatiate new song 
+    song.name = name  
+    @@all << song.name #saves the song to @@all
+    song.name #returns song instance saved
   end
   
   def self.all
