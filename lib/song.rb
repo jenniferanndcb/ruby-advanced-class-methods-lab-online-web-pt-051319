@@ -5,8 +5,8 @@ class Song
   def self.create(name)
     song = self.new   #instantiate new song 
     song.name = name  
-    @@all << song.name #saves the song to @@all
-    song.name #returns song instance saved
+    song.save #saves the song to @@all
+    song #returns song instance saved
   end
   
   def self.all
