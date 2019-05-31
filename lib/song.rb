@@ -42,7 +42,7 @@ class Song
   end
   
   def self.new_from_filename(file_name)
-    song_attr = file_name.split(/[-.]/)
+    song_attr = file_name.split(/[-.]/).map(&:strip)
     name = song_attr[1]
     artist_name = song_attr[0]
     
